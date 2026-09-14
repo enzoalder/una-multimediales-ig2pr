@@ -1,0 +1,92 @@
+#mainrepo {
+    max-width: 700px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+/* TITULOS */
+
+h1 {
+    text-align: center;
+    color: #333333;
+}
+h2 {
+    color: #555555;
+}
+
+/*FORMULARIOS*/
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* BOTONES*/
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555555;
+}
+
+/* Botones deshabilitados */
+
+button:disabled {
+    background-color: #aaaaaa;
+    cursor: not-allowed;
+}
+
+/* OCULTAR SECCIONES*/
+
+.oculto {
+    display: none;
+}
+
+/*RESULTADOS*/
+
+#seccionResultados {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #dddddd;
+}
+
+#seccionResultados p {
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+/*COLORES PARA EL TIEMPO*/
+
+.verde {
+    color: green;
+    font-weight: bold;
+}
+
+
+.rojo {
+    color: red;
+    font-weight: bold;
+}

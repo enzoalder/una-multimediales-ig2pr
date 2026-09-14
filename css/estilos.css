@@ -1,0 +1,266 @@
+/*estilos generales*/
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("../media/fondo.png");
+    font-family: Verdana, sans-serif;
+}
+h1, h2, h3, nav li{
+    font-family: "Abel", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+#contenedor{
+    width: 75%;
+    max-width: 60rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color:#eee
+}
+
+header h1{
+	background-color: #042334;
+	padding: 13px;
+	text-align: center;
+	color: white;
+	font-size: 2.7em;
+}
+header h2{
+	background-color: #42b2f9;
+	padding: 13px;
+	text-align: center;
+	color: black;
+	font-size: 1.7em;
+}
+
+p{
+	text-align: justify;
+    margin-bottom: 1rem;
+}
+
+h2 {
+	text-align: center;
+}
+
+/* estilos del menú*/
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+nav li {
+	display: inline-block;	
+}
+nav a {
+	font-size: 1.4em;
+	line-height: 2.2em;
+	padding: 0.4em 1em;
+	text-align: center;
+	text-decoration: none;
+}
+nav a:link {
+	background-color: #042334;
+	color: #FFF;
+}
+nav a:visited {
+	background-color: #035e8f;
+	color: #FFF;
+}
+nav a:hover {
+	background-color: #3b8fbd;
+	color: #FFF;
+}
+nav a:active {
+	background-color: #246b83;
+	color: #FFF;
+}
+
+/* estilos del footer */
+footer{
+	background-color: #042334;
+	color: white;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+footer a {
+	font-style: italic;
+}
+
+.foot{
+    padding: 20px;
+    margin-top: 10px;
+}
+
+footer a:link {
+    color: white;
+}
+
+footer a:visited{
+	color:grey;
+}
+
+footer a:hover{
+	color: black;
+}
+
+footer a:active{
+	color: #42b2f9;
+}
+
+/* estilos section index */
+
+#sectrio {
+    display: flex;
+    justify-content: space-between
+}
+
+.artrio {
+    width: 30%;
+    box-sizing: content-box;
+    background-color: #eee;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+.artrio img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* estilos section multimedia */
+
+#secduo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.artduobig {
+    width:70%;
+    background-color: #eee;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+.lista-obras {
+    margin-top: 1rem;
+    padding-left: 2rem;
+}
+
+.artduoimg{
+    width: 30%;
+    background-color: #eee;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+.artduoimg img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*DATOS CURIOSOS*/
+.artaside {
+    background-color: #eee;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.artaside h2 {
+    margin-bottom: 1rem;
+}
+
+#btnDatoCurioso {
+    font-family: "Abel", sans-serif;
+    font-size: 1rem;
+    background-color: #042334;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+#btnDatoCurioso:hover {
+    background-color: #3b8fbd;
+}
+
+#datoCurioso {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #bde7f7;
+    color: #042334;
+    border: 1px solid #42b2f9;
+    line-height: 1.5;
+}
+
+/*NOTA*/
+#btnNota {
+    font-family: "Abel", sans-serif;
+    font-size: 1rem;
+    background-color: #042334;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+#btnNota:hover {
+    background-color: #3b8fbd;
+}
+
+#notaTexto {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #42b2f9;
+    color: #042334;
+    border: 1px solid #246b83;
+    line-height: 1.5;
+}
+
+/* estilos media query */
+
+@media (max-width: 480px) {
+    body {
+        background: none;  /* sin fondo en mobile */
+    }
+
+    #contenedor {
+        width: 95%;       
+        padding: 10px;
+    }
+
+    /* secciones con flex pasan a columna */
+    #sectrio,
+    #secduo {
+        flex-direction: column;
+    }
+
+    /* artículos al 100% */
+    .artrio,
+    .artduobig,
+    .artduoimg {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    /* menú en bloque (uno debajo del otro) */
+    nav li {
+        display: block;
+        text-align: center;
+    }
+}
