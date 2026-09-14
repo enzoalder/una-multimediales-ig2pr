@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/repoestilos.css">
+    <title>Repositorio</title>
+</head>
+<body>
+    <div id="contenedor">
+	    <header>
+		    <h1>Laurie Anderson</h1>
+            <h2>Sistema para gestionar el repositorio de grabaciones digitales de obras musicales</h2>
+	    </header>
+	<nav>
+		<ul>
+			<li><a href="./index.html">Inicio</a></li>
+			<li><a href="./obras.html">Obras</a></li>
+			<li><a href="./repositorio.html">Repositorio</a></li>
+		</ul>
+	</nav>
+    <main id="mainrepo">
+        <section id="secsistem">
+            <h2>1. Cantidad de obras</h2>
+            <form id="formCantidad">
+                <label for="cantidad">
+                    ¿Cuántas obras desea ingresar?
+                </label>
+                <input
+                    type="number"
+                    id="cantidad"
+                    min="2"
+                    required
+                >
+                <button type="submit">
+                    Confirmar
+                </button>
+            </form>
+        </section>
+        <section id="seccionObras" class="oculto">
+            <h2>2. Datos de las obras</h2>
+            <form id="formObra">
+                <label for="nombre">
+                    Nombre de la obra:
+                </label>
+                <input
+                    type="text"
+                    id="nombre"
+                    required
+                >
+                <label for="duracion">
+                    Duración en minutos:
+                </label>
+                <input
+                    type="number"
+                    id="duracion"
+                    min="1"
+                    required
+                >
+                <label for="peso">
+                    Peso del archivo en MB:
+                </label>
+                <input
+                    type="number"
+                    id="peso"
+                    min="2"
+                    required
+                >
+                <button type="submit" id="btnObra">
+                    Guardar obra
+                </button>
+
+            </form>
+            <!-- Acá mostramos cuántas obras llevamos cargadas -->
+            <p id="contador">
+                Obras cargadas: 0
+            </p>
+        </section>
+        <section id="seccionParametros" class="oculto">
+            <h2>3. Parámetros del repositorio</h2>
+            <form id="formParametros">
+                <label for="tiempo">
+                    Tiempo de transferencia por MB (milisegundos):
+                </label>
+                <input
+                    type="number"
+                    id="tiempo"
+                    min="10"
+                    required
+                >
+                <label for="costo">
+                    Costo mensual por MB ($):
+                </label>
+                <input
+                    type="number"
+                    id="costo"
+                    min="20"
+                    required
+                >
+                <button type="submit">
+                    Calcular resultados
+                </button>
+            </form>
+        </section>
+        <section id="seccionResultados" class="oculto">
+            <h2>4. Resultados</h2>
+            <p>
+                <strong>Duración total:</strong>
+                <span id="resultadoTotal"></span>
+                minutos
+            </p>
+            <p>
+                <strong>Duración promedio:</strong>
+                <span id="resultadoPromedio"></span>
+                minutos
+            </p>
+            <p>
+                <strong>Obra de mayor duración:</strong>
+                <span id="resultadoMayor"></span>
+            </p>
+            <p>
+                <strong>Tiempo de transferencia:</strong>
+                <span id="resultadoTransferencia"></span>
+            </p>
+            <p>
+                <strong>Presupuesto anual necesario:</strong>
+                $<span id="resultadoPresupuesto"></span>
+            </p>
+            <!-- Este botón comienza deshabilitado -->
+            <button id="btnReiniciar" disabled>
+                Reiniciar
+            </button>
+        </section>
+    </main>
+    	<footer class="foot">
+    		<p>Para contactarse escribir a <a href="mailto:laurie@artedigital.com">laurie@artedigital.com</a></p>
+    	</footer>
+    </div>
+        <!-- Link a repositorio.js -->
+    <script src="js/repositorio.js"></script>
+</body>
+</html>
